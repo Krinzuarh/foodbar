@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: rgba(54, 223, 3, 0.568); /* For browsers that do not support gradients */
+    background: linear-gradient(to right, rgba(52, 255, 1, 0.685) , rgb(13, 104, 25)); /* Standard syntax (must be last) */
+}
+h1 {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    /* margin-top: 50px; */
+}
+
+.o {
+    color: #F0A700;
+}
+#box {
+    padding: 30px;
+}
+
+#bartender {
+    background-color: aliceblue;
+    
+}
+
+#beertype {
+    background-color: aqua;
+    padding: 10px;
+}
+
+#que {
+    background-color: chocolate;
+}
+
+#storage {
+    background-color: tomato;
+}
