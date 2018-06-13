@@ -12,41 +12,91 @@
         <h1>F<span class="o">oo</span>Bar</h1>
         
         <div id="box">
-            <div id="bartender"></div>
-            <div id="beertype"></div>
-            <div id="order"></div>
-            <div id="stamp"></div>
-            <div id="que"></div>
-            <div id="storage"></div>
+            <div id="gridbart">
+                <h2>Bartenderne</h2>
+                <div id="bartender"></div>
+                </div>
+
+            <div id="gridBeer">
+                <h2>What the people can get!</h2>
+                <div id="beertype"></div>
+            </div>
+
+
+            <div id="gridtap">
+                <h2>What's on stock</h2>
+                    <div id="tap"></div>
+                </div>
+
+
+            <div id="gridServ">
+                 <h2>What people are getting</h2>   
+                <div id="serv"></div>
+            </div>
+
+            <div id="gridque">
+                    <h2>What the people want</h2>
+                <div id="que"></div>
+            </div>
+
+            <div id="gridStorage">
+                    <h2>What the people need!</h2>
+                <div id="storage"></div>
+            </div>
+            
         </div>
+
+            <template id="tapsTemp">
+                <div id="taptap">   
+                    <div class="tapimg">
+                        <img src="">
+                    </div>
+                    <div class="beers"></div>
+                    <div class="lvl"></div>
+                    <div class="capa"></div>
+                    
+                </div>
+            </template>
             <template id="bartenderTemp">
                 <div class="bName"></div>
                 <div class="status"></div>
+                <!-- <div class="waiting"></div> -->
                 <div class="statusdetail"></div>
-                <div class="waiting"></div>
             </template>
+
+
             <template id="beerTypeTemp">
+                    
+                <div id="beert">
+                        <div class="beerimg">
+                                <img src="">
+                            </div>
                     <div class="bename"></div>
                     <div class="cate"></div>
                     <div class="pouring"></div>
                     <div class="alco"></div>
+                </div>
 
-
             </template>
-            <template id="orderTemp">
-                <div class=""></div>
+            <template id="servTemp">
+                <div class="orde"></div>
             </template>
-            <template id="stampTemp">
-                <div class="stam"></div>
-            </template>
+        
             <template id="queTemp">
-                <div class="starttime"></div>
+                <!-- <div class="starttime"></div> -->
                 <div class="ord"></div>
 
             </template>
             <template id="storageTemp">
-                <div class="amount"></div>
-                <div class="sName"></div>
+                <div id="storebox">
+                    <div class="sName"></div>
+                    
+                    <div class="amount">
+                        
+                    </div>
+                    </div>
+                </div>                
+                <!-- <img src="img/white-barrel.svg.hi.png" alt="keg" height="25px" width="25px"> -->
             </template>
 
 

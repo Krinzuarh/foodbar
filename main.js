@@ -5,6 +5,8 @@
  let templateBartender = document.querySelector("#bartenderTemp").content;
  let templatebeertype = document.querySelector("#beerTypeTemp").content;
  let templateQue = document.querySelector("#queTemp").content;
+ let templateServ = document.querySelector("#servTemp").content;
+ let templateTabs = document.querySelector("#tapsTemp").content;
 
 
 let bar;
@@ -14,13 +16,21 @@ document.addEventListener("DOMContentLoaded", loadScript);
 
 function loadScript(){
     data = JSON.parse(FooBar.getData());
-
+    document.querySelector("#bartender").innerHTML = "";
+    document.querySelector("#beertype").innerHTML = "";
+    document.querySelector("#que").innerHTML = "";
+    document.querySelector("#storage").innerHTML = "";
+    document.querySelector("#serv").innerHTML = "";
+    document.querySelector("#tap").innerHTML = "";
     console.log(bar);
 
 //document.querySelector(".bartender").textContent = mitJson.bartenders;
 
 //Storage
 //resetter, så det ikke bliver apennded flere gange efter hinanden 
+
+
+                        //      STORAGE         //
 
                 data.storage.forEach(function(e){
 
@@ -37,13 +47,28 @@ function loadScript(){
                         document.querySelector("#storage").appendChild(clone);
                         });
 
+
+                        //      BARTENDER       //
+
                 data.bartenders.forEach(function(e){
+
                         let clone = templateBartender.cloneNode(true);
                         clone.querySelector(".bName").textContent = e.name;
                         clone.querySelector(".status").textContent = e.status;
                         clone.querySelector(".statusdetail").textContent = e.statusDetail;
-                        clone.querySelector(".waiting").textContent = e.waiting;
+                        // clone.querySelector(".waiting").textContent = e.waiting;
+                        if (e.status == "READY"){
+                                clone.querySelector(".status").style.color = "#4de41fd2"
+                        }
+                        else if (e.status == "WORKING"){
+                                clone.querySelector(".status").style.color = "#F0A700"
+                        }
+
                         document.querySelector("#bartender").appendChild(clone);
+                        
+
+                        //     BEER TYPE        //
+
                      });
                      data.beertypes.forEach(function(e){
                         let clone = templatebeertype.cloneNode(true);
@@ -51,18 +76,43 @@ function loadScript(){
                         clone.querySelector(".cate").textContent = e.category;
                         clone.querySelector(".pouring").textContent = e.pouringSpeed;
                         clone.querySelector(".alco").textContent = e.alc;
+                                clone.querySelector(".beerimg img").src = "images/"+e.label;
+
                         document.querySelector("#beertype").appendChild(clone);
                      });
+
+
+                     //         QUEUE           //
+
                      data.queue.forEach(function(e){
                         let clone = templateQue.cloneNode(true);
-                        clone.querySelector(".starttime").textContent = e.startTime;
                         clone.querySelector(".ord").textContent = e.order;
                         
                         document.querySelector("#que").appendChild(clone);
                      });
-                        
-}
-// setInterval(function () {
-//     loadScript();
-// }, 10000);
+        
+                        data.serving.forEach(function(e){
+                                let clone = templateServ.cloneNode(true);
+                                clone.querySelector(".orde").textContent = e.order;
+                                document.querySelector("#serv").appendChild(clone);
+                        });
+
+                                data.taps.forEach(function(e){
+                                let clone = templateTabs.cloneNode(true);
+                                clone.querySelector(".lvl").textContent = e.level;
+                                clone.querySelector(".capa").textContent = e.capacity;
+                                clone.querySelector(".beers").textContent = e.beer;
+                                let beerLabel = e.beer.toLowerCase();
+                                clone.querySelector(".tapimg img").src = "images/tabs/"+beerLabel+".png";
+                               
+                                document.querySelector("#tap").appendChild(clone);
+                                });
+
+
+
+                }
+
+ setInterval(function () {
+          loadScript();
+ }, 10000);
 
