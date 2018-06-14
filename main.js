@@ -22,12 +22,8 @@ function loadScript(){
     document.querySelector("#storage").innerHTML = "";
     document.querySelector("#serv").innerHTML = "";
     document.querySelector("#tap").innerHTML = "";
-    console.log(bar);
-
-//document.querySelector(".bartender").textContent = mitJson.bartenders;
-
-//Storage
-//resetter, så det ikke bliver apennded flere gange efter hinanden 
+    //resetter, så det ikke bliver apennded flere gange efter hinanden
+    
 
 
                         //      STORAGE         //
@@ -115,8 +111,6 @@ function loadScript(){
                                         clone.querySelector(".procent .indhold").style.background = ` linear-gradient(90deg,  #F0A700 ${fuld}%, white ${resten}%)`;
 
                                 }
-
-
                                 document.querySelector("#tap").appendChild(clone);
                                 });
 

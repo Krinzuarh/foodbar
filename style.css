@@ -28,6 +28,7 @@ div {
 }
 h2 {
     margin-top: 20px;
+    padding-left: 30px;
     font-family: 'Bowlby One SC', cursive;
 }
 .o {
@@ -67,6 +68,7 @@ h2 {
     padding: 10px;
     background-color: #00000098;
     border-radius: 15px;
+    
 }
 /*          QUEUE           */
 #que {
@@ -212,4 +214,38 @@ h2 {
 }
 /*      MEDIA Q      */
 
+@media screen and (min-width: 550px) {
+    #beertype{
+        grid-template-columns: 1fr 1fr;
+    }
+    #tap {
+        grid-template-columns: 1fr 1fr;
+    }
+    #storage {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
+@media screen and (min-width: 800px) {
+    #beertype{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #tap {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #storage {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #beertype{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #tap {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #storage {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
