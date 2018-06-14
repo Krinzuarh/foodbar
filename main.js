@@ -106,13 +106,13 @@ function loadScript(){
                                 clone.querySelector(".tapimg img").src = "images/tabs/"+beerLabel+".png";
                                
                                 if (e.level == 2500){ 
-                                        console.log("hej");
-                                        clone.querySelector(".procent .indhold").style.background = " (90deg,  #F0A700 100%, white 0%)";
+                                
+                                        clone.querySelector(".procent .indhold").style.background = " linear-gradient(90deg,  #F0A700 100%, white 0%)";
                                 }
                                 else{
                                         let fuld = ((e.level * 10)/25)/10;
                                         let resten = 100 - fuld;
-                                        clone.querySelector(".procent .indhold").style.background = `(90deg,  #F0A700 ${fuld}%, white ${resten}%)`;
+                                        clone.querySelector(".procent .indhold").style.background = ` linear-gradient(90deg,  #F0A700 ${fuld}%, white ${resten}%)`;
 
                                 }
 
@@ -125,6 +125,6 @@ function loadScript(){
                 }
 
  setInterval(function () {
-          loadScript();
+         loadScript();
  }, 10000);
 

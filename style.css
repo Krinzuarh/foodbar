@@ -1,13 +1,13 @@
+/*      BASIS       */
 * {
     margin: 0px;
     padding: 0;
 }
 body {
-    height: 100vh;
-    
-    margin: 20px;
+    /* margin: 20px; */
     background: #494949bf; /* For browsers that do not support gradients */
     background: linear-gradient(to right, grey, darkslategrey ); Standard syntax (must be last)
+    background-repeat: no-repeat; 
 }
 h1 {
     font-family: 'Bowlby One SC', cursive;
@@ -18,12 +18,13 @@ h1 {
 }
 img {
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
 }
-#box{
-    width: 100%;
-}
+
 div {
-    color: rgb(255, 255, 255);
+    color: white;
+    
 }
 h2 {
     margin-top: 20px;
@@ -32,11 +33,8 @@ h2 {
 .o {
     color: #F0A700;
 }
- /* #box {
-    max-width: 680px;
-    position: relative;
-}  */
-
+ 
+/*          BARTENDER           */
 #bartender {
     /* margin-left: 20px;
     margin-right: 20px; */
@@ -59,20 +57,20 @@ h2 {
 .status {
     font-weight: 999;
 }
-
+/*          SERVING            */
 .orde {
-    padding-bottom: 5px;
+    padding: 5px;
+    
 }
 #serv {
     /* border: 2.5px solid rgb(15, 2, 2); */
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.598);
+    background-color: #00000098;
     border-radius: 15px;
-
 }
-
+/*          QUEUE           */
 #que {
-    background-color: rgba(0, 0, 0, 0.598);
+    background-color: #00000098;
     border-radius: 15px;
    padding: 10px;
    /* border: 2.5px solid rgb(15, 2, 2); */
@@ -82,7 +80,7 @@ h2 {
 /*      STORAGE         */
 
 #storage {
-    padding: 50px;
+    padding-left: 15px;
    /* border: 2.5px solid rgb(15, 2, 2); */
    display: grid;
     grid-template-columns: auto auto;
@@ -105,17 +103,27 @@ h2 {
     justify-content: center; */
     
 }
-
+.ord {
+    padding: 5px;
+}
 .sName {
     font-size: 1.5em;
-    padding: 40px;
-    padding-top: 80px;
+    padding: 10px;
+    padding-top: 10px;
 }
+
+
+
+
 /*          BEER TYPE       */
+
+
 #beertype {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
+    /*     grid-template-columns: 1fr 1fr */
 }
+
 .bename {
     font-weight: 999;
     display: flex;
@@ -125,6 +133,7 @@ h2 {
 }
 .cate, .pouring, .alco{
     display: flex;
+    justify-content: center;
 }
 #beert {
     background-color: rgba(0, 0, 0, 0.598);
@@ -136,17 +145,22 @@ h2 {
     
 }
 .beerimg {
-    /* display: grid;
-    grid-template-columns: auto auto; */
-    /* height: 100px; */
+    /* height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; */
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .beerimg img {
-    height: 150px;
+    height: auto;
     width: 100%;
     border-radius: 5px;
-
 }
-
 
 
 /*          TAPS            */
@@ -156,33 +170,46 @@ h2 {
     border-radius: 15px;
     margin: 5px;
     padding: 10px;
-    max-width: 680px;
-}
+/*     max-width: 680px;
+ */}
 
 #tap {
     display: grid;
-    grid-template-columns: auto  auto;
+    grid-template-columns: 1fr;
     
 }
-.tapimg img{
-    height: 150px;
+
+.tapimg {
+    height: 200px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tapimg img{
+    height: auto;
+    width: 100%;
+    
 }
 .beers {
     display: flex;
     justify-content: center;
     font-size: 1.5em;
 }
+.lvl, .capa {
+    display: flex;
+    justify-content: center;
+}
 .procent {
     background: rgb(255, 255, 255);
     height: 30px;
     width: 250px;
 }
+
 .indhold {
     background: linear-gradient(90deg,  #F0A700 50%, white 50%);
-    height: 30px;
-    width: 100%;
-
-
+    height: 100%;
+    width: 250px;
 }
 /*      MEDIA Q      */
+
+
